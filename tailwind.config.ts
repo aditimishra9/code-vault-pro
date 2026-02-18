@@ -13,12 +13,23 @@ export default {
       },
     },
     extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        colors: {
+          border: "hsl(var(--border))",
+          input: "hsl(var(--input))",
+          ring: "hsl(var(--ring))",
+          background: "hsl(var(--background))",
+          foreground: "hsl(var(--foreground))",
+          surface: {
+            DEFAULT: "hsl(var(--surface))",
+            foreground: "hsl(var(--surface-foreground))",
+            elevated: "hsl(var(--surface-elevated))",
+          },
+          amber: {
+            DEFAULT: "hsl(var(--amber))",
+            dim: "hsl(var(--amber-dim))",
+            glow: "hsl(var(--amber-glow))",
+          },
+          code: "hsl(var(--code-bg))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -87,5 +98,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
